@@ -1,0 +1,18 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="w-50 p-4 border border-3 shadow">
+        <h1 class="text-center my-2">Temperture</h1>
+        <div class="mb-3">
+            <label for="">Enter temperature in degree</label>
+            <input type="text" class="form-control"  [(ngModel)]="tempertureInC" value="{{tempertureInC}}" (input)="convertToFh()">
+           
+        </div>
+        <div class="mb-3">
+            <label for="">Enter temperature in fahrenheit</label>
+            <input type="text" class="form-control" [(ngModel)]="tempertureInFh" value="{{tempertureInFh}}" (input)="convertToDegree()">
+           
+            
+            
+        </div>
+    
+    </div>
+</div>

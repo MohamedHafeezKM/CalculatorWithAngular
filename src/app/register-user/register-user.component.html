@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center mt-5">
+
+    <form action="" class="w-75 border p-4 shadow" [formGroup]="registerForm" (ngSubmit)="signUp()">
+        <h1 class="text-center fw-bold my-2">Register</h1>
+
+        <div class="mb-3">
+            <label for="">username</label>
+            <input type="text" placeholder="enter username" class="form-control" formControlName="username">
+        </div>
+        <div class="mb-3">
+            <label for="">email</label>
+            <input type="email" placeholder="enter email" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="">password</label>
+            <input type="password" placeholder="enter password" class="form-control" formControlName="password">
+        </div>
+        <div class="mb-3">
+            <button type="submit">signup</button>
+        </div>
+
+    </form>
+
+</div>

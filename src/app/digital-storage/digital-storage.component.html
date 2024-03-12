@@ -1,0 +1,18 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="w-50 p-4 border border-3 shadow">
+        <h1 class="text-center my-2">Digital storage Conversion</h1>
+        <div class="mb-3">
+            <label for="">Enter Digital storage in Bytes</label>
+            <input type="text" class="form-control"  [(ngModel)]="bytes" value="{{bytes}}" (input)="convertToKilobyte()">
+           
+        </div>
+        <div class="mb-3">
+            <label for="">Enter Digital storage in Kilobyte</label>
+            <input type="text" class="form-control" [(ngModel)]="kilobyte" value="{{kilobyte}}" (input)="convertToByte()">
+           
+            
+            
+        </div>
+    
+    </div>
+</div>

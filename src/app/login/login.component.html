@@ -1,0 +1,21 @@
+<div class="container d-flex justify-content-center mt-5">
+
+    <form action="" class="w-75 border p-4 shadow" [formGroup]="loginForm" (ngSubmit)="logIn()">
+        <h1 class="text-center fw-bold my-2">Login</h1>
+
+        <div class="mb-3">
+            <label for="">username</label>
+            <input type="text" placeholder="enter username" class="form-control" formControlName="username">
+        </div>
+       
+        <div class="mb-3">
+            <label for="">password</label>
+            <input type="password" placeholder="enter password" class="form-control" formControlName="password">
+        </div>
+        <div class="mb-3">
+            <button type="submit">Login</button>
+        </div>
+
+    </form>
+
+</div>

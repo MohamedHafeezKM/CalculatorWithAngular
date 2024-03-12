@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center mt-5">
+
+    <form action="" class="w-75 border p-4 shadow" [formGroup]="bmiForm" (ngSubmit)="calculateBMI()">
+        <h1 class="text-center fw-bold my-2">BMI</h1>
+
+        <div class="mb-3">
+            <label for="">Weight</label>
+            <input type="text" placeholder="Enter weight in KG" class="form-control" formControlName="weight">
+            <span class="form-text text-danger" *ngIf="weight?.touched && weight?.invalid">Enter Valid Weight</span>
+            <span class="form-text text-success" *ngIf="weight?.touched && weight?.valid">Good to go ✓</span>
+            <span class="form-text" *ngIf="weight?.pristine">*Required</span>
+        </div>
+       
+        <div class="mb-3">
+            <label for="">Height</label>
+            <input type="text" placeholder="Enter height in cm" class="form-control" formControlName="height">
+            <span class="form-text text-danger" *ngIf="height?.touched && height?.invalid">Enter Valid Height</span>
+            <span class="form-text text-success" *ngIf="height?.touched && height?.valid">Good to go ✓</span>
+            <span class="form-text" *ngIf="height?.pristine">*Required</span>
+        </div>
+        <div class="mb-3">
+            <button type="submit" [disabled]="bmiForm.invalid">Calculate</button>
+        </div>
+        <div>{{result}}</div>
+
+    </form>
+
+</div>
+

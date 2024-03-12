@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center mt-5">
+    <form class="w-50 p-4 border border-3 shadow" [formGroup]="emiForm" (ngSubmit)="calculateEmi()">
+        <h1 class="text-center my-2">EMI CALCULATOR</h1>
+        <div class="mb-3">
+            <label for="">enter loan amount</label>
+            <input type="text" class="form-control"  placeholder="loan amount" formControlName="amount">
+            <span class="form-text text-danger" *ngIf="amount?.touched&&amount?.invalid">enter valid amount</span>
+            <span class="form-text text-primary" *ngIf="amount?.pristine">*Required</span>
+        </div>
+        <div class="mb-3">
+            <label for="">tenure</label>
+            <input type="text" class="form-control" placeholder="enter tenure" formControlName="tenure"> 
+            <span class="form-text text-danger" *ngIf="tenure?.touched&&tenure?.invalid">enter valid tenure</span>
+            <span class="form-text text-primary" *ngIf="tenure?.pristine">*Required</span>
+        </div>
+        <div class="mb-3">
+            <label for="">interest rate</label>
+            <input type="text" class="form-control" placeholder="enter interest rate" formControlName="interest">
+            <span class="form-text text-danger" *ngIf="interest?.touched&&interest?.invalid">enter valid interest</span>
+            <span class="form-text text-primary" *ngIf="interest?.pristine">*Required</span>
+
+        </div>
+        <div class="mb-3">
+           
+            <input type="submit" value="Calculate EMI" class="btn btn-info" [disabled]="emiForm.invalid">
+        </div>
+        <div class="mb-3">
+          <div *ngIf="results">Emi for a month is {{results}}</div>
+          <div *ngIf="totalPayments">Total Payment {{totalPayments}}</div>
+          <div *ngIf="totalInterestPayables">Total Interest Payable {{totalInterestPayables}}</div>
+          <div *ngIf="psummary">
+            {{psummary}}% Principal Loan Amount
+          </div>
+          <div *ngIf="isummary">
+            {{isummary}}% Total Interest
+          </div>
+        </div>
+    </form>
+</div>

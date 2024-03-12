@@ -1,0 +1,22 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="w-50 p-4 border border-3 shadow">
+        <h1 class="text-center my-2">Subtraction</h1>
+        <div class="mb-3">
+            <label for="">enter number1</label>
+            <input type="text" class="form-control"  placeholder="enter number1" #num1>
+        </div>
+        <div class="mb-3">
+            <label for="">enter number2</label>
+            <input type="text" class="form-control" placeholder="enter number2" #num2>
+        </div>
+        <div class="mb-3">
+           
+            <input type="button" (click)="performSubtraction(num1,num2)" value="Sub" class="btn btn-info" >
+        </div>
+        <div>
+           
+            Result={{result}}
+            
+        </div>
+    </div>
+</div>

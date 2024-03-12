@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="w-50 p-4 border border-3 shadow">
+        <h1 class="text-center my-2">Length Conversion</h1>
+        <div class="mb-3">
+            <label for="">Enter Length in meter</label>
+            <input type="text" class="form-control"  [(ngModel)]="m" value="{{m}}" (input)="convertocM()">
+           
+        </div>
+        <div class="mb-3">
+            <label for="">Enter Length in cm</label>
+            <input type="text" class="form-control" [(ngModel)]="cM" value="{{cM}}" (input)="convertTom()">
+           
+            
+            
+        </div>
+    
+    </div>
+</div>
+
+
